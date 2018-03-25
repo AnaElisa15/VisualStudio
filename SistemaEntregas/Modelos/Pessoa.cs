@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class Class1
+    public class Pessoa
     {
+        public int PessoaID { get; set; }
+
+        public string Nome { get; set; }
+
+
+        public string Cpf { get; set; }
     }
 }
