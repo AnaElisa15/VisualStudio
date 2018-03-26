@@ -52,7 +52,8 @@ namespace ConsoleView
                 switch (opcaoDigitada)
                 {
                     case OpcoesMenuPrincipal.CadastrarCliente:
-                        CadastrarCliente();
+                        Cliente c = CadastrarCliente();
+                        ExibirDadosCliente(c);
                         break;
 
                     case OpcoesMenuPrincipal.PerquisarCliente:
