@@ -92,6 +92,22 @@ namespace ConsoleView
             cli.Cpf = Console.ReadLine();
 
             // ... Endereco
+            Endereco end = new Endereco();
+            
+            Console.Write("Digite o nome da rua: ");
+            end.Rua = Console.ReadLine();
+            
+            Console.WriteLine();
+            
+            Console.Write("Digite o numero: ");
+            end.Numero = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine();
+            
+            Console.Write("Digite o complemento: ");
+            end.Complemento = Console.ReadLine();
+            
+            cli._Endereco = end;
 
             return cli;
         }
@@ -100,6 +116,11 @@ namespace ConsoleView
         {
             // TODO : Fazer depois
             return new Cliente();
+        }
+
+        private static void ExibirDadosCliente(Cliente cliente)
+        {
+
         }
     }
 }

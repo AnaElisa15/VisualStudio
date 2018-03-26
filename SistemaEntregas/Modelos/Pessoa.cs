@@ -10,7 +10,7 @@
 
         public int EnderecoID { get; set; }
 
-        private Endereco _Endereco { get; set; }
+        public Endereco _Endereco { get; set; }
 
     }
 }
