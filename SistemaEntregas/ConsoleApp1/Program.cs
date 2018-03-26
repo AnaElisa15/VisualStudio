@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelos;
 
 namespace ConsoleView
 {
     class Program
     {
-        private static int Menu()
+        enum OpcoesMenuPrincipal
+        {
+            CadastrarCliente,
+            PerquisarCliente,
+            EditarCliente,
+            ExcluirCliente,
+            LimparTela,
+            Sair
+        }
+
+        private static OpcoesMenuPrincipal Menu()
         {
             Console.WriteLine("Escolha sua opcao");
             Console.WriteLine("");
@@ -23,16 +34,73 @@ namespace ConsoleView
             Console.WriteLine("5 - Sair");
 
             //return Convert.ToInt32(Console.ReadLine());
-            return int.Parse(Console.ReadLine());
-     }
+            string opcao = Console.ReadLine();
+            return (OpcoesMenuPrincipal)int.Parse(opcao);
 
-    static void Main(string[] args)
-    {
-       
-        int opcaoDigitada = Menu();
-        
-       
-        Console.ReadKey();
+        }
+
+        static void Main(string[] args)
+        {
+
+            OpcoesMenuPrincipal opcaoDigitada =
+             OpcoesMenuPrincipal.Sair;
+
+            do
+            {
+                opcaoDigitada = Menu();
+
+                switch (opcaoDigitada)
+                {
+                    case OpcoesMenuPrincipal.CadastrarCliente:
+                        CadastrarCliente();
+                        break;
+
+                    case OpcoesMenuPrincipal.PerquisarCliente:
+                        PesquisarCliente();
+                        break;
+
+                    case OpcoesMenuPrincipal.EditarCliente:
+                        break;
+
+                    case OpcoesMenuPrincipal.ExcluirCliente:
+                        break;
+
+
+                    case OpcoesMenuPrincipal.LimparTela:
+                        break;
+
+                    case OpcoesMenuPrincipal.Sair:
+                        break;
+
+                    default:
+                        break;
+
+                }
+            } while (opcaoDigitada != OpcoesMenuPrincipal.Sair);
+        }
+        // Metodos Cliente
+        private static Cliente CadastrarCliente()
+        {
+            Cliente cli = new Cliente();
+
+            Console.Write("Digite o nome: ");
+            cli.Nome = Console.ReadLine();
+
+            Console.WriteLine();
+
+            Console.Write("Digite o cpf: ");
+            cli.Cpf = Console.ReadLine();
+
+            // ... Endereco
+
+            return cli;
+        }
+
+        private static Cliente PesquisarCliente()
+        {
+            // TODO : Fazer depois
+            return new Cliente();
+        }
     }
 }
-}
+
