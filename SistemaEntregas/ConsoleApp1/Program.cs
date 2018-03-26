@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controllers;
 using Modelos;
 
 namespace ConsoleView
@@ -53,6 +54,10 @@ namespace ConsoleView
                 {
                     case OpcoesMenuPrincipal.CadastrarCliente:
                         Cliente c = CadastrarCliente();
+
+                        ClienteController cc = new ClienteController();
+                        cc.SalvarCliente(c);
+                        
                         ExibirDadosCliente(c);
                         break;
 
