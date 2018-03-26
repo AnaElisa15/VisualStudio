@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{242C0BD4-5167-4A1D-8941-87004A0B30D6}</ProjectGuid>
+    <ProjectGuid>{0E577844-659C-4059-8E35-A5F47DAE708D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>Controllers</RootNamespace>
+    <AssemblyName>Controllers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,24 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ClienteController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{0e577844-659c-4059-8e35-a5f47dae708d}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modelos\Modelos.csproj">
       <Project>{8574e4a6-eac2-4076-9f33-4cd4e9016724}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
