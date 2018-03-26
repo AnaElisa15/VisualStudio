@@ -12,12 +12,12 @@ namespace ConsoleView
     {
         enum OpcoesMenuPrincipal
         {
-            CadastrarCliente,
-            PerquisarCliente,
-            EditarCliente,
-            ExcluirCliente,
-            LimparTela,
-            Sair
+            CadastrarCliente = 1,
+            PerquisarCliente = 2,
+            EditarCliente = 3,
+            ExcluirCliente = 4,
+            LimparTela = 5,
+            Sair = 6
         }
 
         private static OpcoesMenuPrincipal Menu()
