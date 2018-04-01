@@ -219,8 +219,6 @@ namespace ConsoleView
             Console.WriteLine("Digite o cpf desejado");
             cli.Cpf = Console.ReadLine();
 
-            Endereco e = AlterarEndereco(cli.EnderecoID);
-
             // ----
 
             cc.EditarCliente(idCliente, cli);
