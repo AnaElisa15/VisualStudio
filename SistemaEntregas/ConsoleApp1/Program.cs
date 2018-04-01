@@ -158,6 +158,21 @@ namespace ConsoleView
             Console.WriteLine();
         }
 
+        private static void ListarTodosClientes()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" --- Clientes cadastrados --- ");
+
+            ClienteController cc = new ClienteController();
+            List<Cliente> lista = cc.ListarClientes();
+
+            foreach (Cliente cli in lista)
+            {
+                ExibirDadosCliente(cli);
+            }
+            Console.WriteLine();
+        }
+
     }
 }
 
