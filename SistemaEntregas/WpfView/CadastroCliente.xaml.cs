@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfView
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para CadastroCliente.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadastroCliente : Page
     {
-        public MainWindow()
+        public CadastroCliente()
         {
             InitializeComponent();
-        }
-
-        private void btnCadastrarCliente_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroCliente cadCli = new CadastroCliente();
-            //cadCli.Show();
-            cadCli.ShowDialog();
         }
     }
 }
