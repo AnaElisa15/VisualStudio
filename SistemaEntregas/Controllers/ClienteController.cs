@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Modelos;
 
 namespace Controllers
@@ -16,5 +13,17 @@ namespace Controllers
             MeusClientes.Add(cliente);
         }
       
+        public Cliente PesquisarPorNome(string nome)
+        {
+            var c = from x in MeusClientes
+                    where x.Nome.Equals(nome)
+                    select x;
+
+            if (c != null)
+                return c.FirstOrDefault();
+
+            else
+                return null;
+        }
     }
 }
